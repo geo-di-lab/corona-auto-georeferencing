@@ -14,7 +14,6 @@ In order to utilize uv, I recommend installing uv globally with the standalone i
 once uv is installed, open your terminal and cd to project directory and run 'uv sync'. This will handle installing a .venv with the correct version of python
 and the correct packages and dependencies. From there you can either use 'uv run XXXXX.py' to run python scripts, or you can add the python installation 
 to to your IDE as a local interpreter to use it within the IDE seamlessly.
->Note: agisoft_automation requires the manual installation of the agisoft api as it's not configured to be downloaded remotely.
+>Note: If agisoft automation fails to download the agisoft api, you can use the the manual installation of the agisoft api.
 > The link to the api can be found here: https://www.agisoft.com/downloads/installer/. 
-> Go to the python 3 module section, download the .whl, and then move it to agisoft_automation folder
-> 
+> Go to the python 3 module section, download the .whl, and then move it to agisoft_automation folder and then use uv add path/to/whl/
