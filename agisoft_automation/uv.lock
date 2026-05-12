@@ -1,0 +1,62 @@
+version = 1
+revision = 3
+requires-python = "==3.11.*"
+resolution-markers = [
+    "(platform_machine == 'AMD64' and sys_platform == 'win32') or (platform_machine == 'x86_64' and sys_platform == 'win32')",
+    "platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "platform_machine == 'x86_64' and sys_platform == 'darwin'",
+    "platform_machine == 'x86_64' and sys_platform == 'linux'",
+    "(platform_machine != 'arm64' and platform_machine != 'x86_64' and sys_platform == 'darwin') or (platform_machine != 'AMD64' and platform_machine != 'x86_64' and sys_platform == 'win32') or (platform_machine != 'x86_64' and sys_platform == 'linux') or (sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')",
+]
+
+[[package]]
+name = "agisoft-automation"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "metashape", version = "2.3.1", source = { url = "https://download.agisoft.com/metashape-2.3.1-cp39.cp310.cp311.cp312.cp313-abi3-linux_x86_64.whl" }, marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
+    { name = "metashape", version = "2.3.1", source = { url = "https://download.agisoft.com/metashape-2.3.1-cp39.cp310.cp311.cp312.cp313-abi3-macosx_11_0_universal2.macosx_10_13_x86_64.whl" }, marker = "(platform_machine == 'arm64' and sys_platform == 'darwin') or (platform_machine == 'x86_64' and sys_platform == 'darwin')" },
+    { name = "metashape", version = "2.3.1", source = { url = "https://download.agisoft.com/metashape-2.3.1-cp39.cp310.cp311.cp312.cp313-none-win_amd64.whl" }, marker = "(platform_machine == 'AMD64' and sys_platform == 'win32') or (platform_machine == 'x86_64' and sys_platform == 'win32')" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "metashape", marker = "platform_machine == 'arm64' and sys_platform == 'darwin'", url = "https://download.agisoft.com/metashape-2.3.1-cp39.cp310.cp311.cp312.cp313-abi3-macosx_11_0_universal2.macosx_10_13_x86_64.whl" },
+    { name = "metashape", marker = "platform_machine == 'x86_64' and sys_platform == 'darwin'", url = "https://download.agisoft.com/metashape-2.3.1-cp39.cp310.cp311.cp312.cp313-abi3-macosx_11_0_universal2.macosx_10_13_x86_64.whl" },
+    { name = "metashape", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'", url = "https://download.agisoft.com/metashape-2.3.1-cp39.cp310.cp311.cp312.cp313-abi3-linux_x86_64.whl" },
+    { name = "metashape", marker = "(platform_machine == 'AMD64' and sys_platform == 'win32') or (platform_machine == 'x86_64' and sys_platform == 'win32')", url = "https://download.agisoft.com/metashape-2.3.1-cp39.cp310.cp311.cp312.cp313-none-win_amd64.whl" },
+]
+
+[[package]]
+name = "metashape"
+version = "2.3.1"
+source = { url = "https://download.agisoft.com/metashape-2.3.1-cp39.cp310.cp311.cp312.cp313-abi3-linux_x86_64.whl" }
+resolution-markers = [
+    "platform_machine == 'x86_64' and sys_platform == 'linux'",
+]
+wheels = [
+    { url = "https://download.agisoft.com/metashape-2.3.1-cp39.cp310.cp311.cp312.cp313-abi3-linux_x86_64.whl", hash = "sha256:67a47a96fbe3305614088299c604c09f1277965523531f358f7b8a0419a674f0" },
+]
+
+[[package]]
+name = "metashape"
+version = "2.3.1"
+source = { url = "https://download.agisoft.com/metashape-2.3.1-cp39.cp310.cp311.cp312.cp313-abi3-macosx_11_0_universal2.macosx_10_13_x86_64.whl" }
+resolution-markers = [
+    "platform_machine == 'arm64' and sys_platform == 'darwin'",
+    "platform_machine == 'x86_64' and sys_platform == 'darwin'",
+]
+wheels = [
+    { url = "https://download.agisoft.com/metashape-2.3.1-cp39.cp310.cp311.cp312.cp313-abi3-macosx_11_0_universal2.macosx_10_13_x86_64.whl", hash = "sha256:1dde07edada9c95b91a9e416ec63dbcde6f311c23551ff0ec95a764aa7d462b0" },
+]
+
+[[package]]
+name = "metashape"
+version = "2.3.1"
+source = { url = "https://download.agisoft.com/metashape-2.3.1-cp39.cp310.cp311.cp312.cp313-none-win_amd64.whl" }
+resolution-markers = [
+    "(platform_machine == 'AMD64' and sys_platform == 'win32') or (platform_machine == 'x86_64' and sys_platform == 'win32')",
+]
+wheels = [
+    { url = "https://download.agisoft.com/metashape-2.3.1-cp39.cp310.cp311.cp312.cp313-none-win_amd64.whl", hash = "sha256:442a6a97ed0272bb274edbb183ebccdf16c93414c1451d233fd55333e53341d2" },
+]
