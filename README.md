@@ -7,3 +7,14 @@ This project will be split up into folders containing different parts of the wor
 > The reason for this workflow is for two reasons, first at the time of writing I have only gotten both projects to work with different python versions: lightglue works for the latest version of python, while Agisofts API is up to version 3.11.
 > 
 > Second, These two aspects are entirely independent of each other, and I felt that it would improve readability.
+
+## Setup
+Due to the conflicting python versions, a tool known as `uv` is utilized to manage both virtual environments effciently
+In order to utilize uv, I recommend installing uv globally with the standalone installer, found at the following link https://docs.astral.sh/uv/getting-started/installation/.
+once uv is installed, open your terminal and cd to project directory and run 'uv sync'. This will handle installing a .venv with the correct version of python
+and the correct packages and dependencies. From there you can either use 'uv run XXXXX.py' to run python scripts, or you can add the python installation 
+to to your IDE as a local interpreter to use it within the IDE seamlessly.
+>Note: agisoft_automation requires the manual installation of the agisoft api as it's not configured to be downloaded remotely.
+> The link to the api can be found here: https://www.agisoft.com/downloads/installer/. 
+> Go to the python 3 module section, download the .whl, and then move it to agisoft_automation folder
+> 
